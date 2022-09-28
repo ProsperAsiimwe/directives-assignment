@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)="buttonClicked()">Display Details</button>
+
+<p *ngIf="buttonStatus">Secret Password = tuna</p>
+
+<ul class="list-group">
+  <li class="list-group-item"
+  *ngFor="let item of buttonClicks; let i = index"
+  [ngStyle]="{backgroundColor: setBgColor(i)}"
+  [ngClass]="{textColor: incrementalStatus === 'whiteText' }">
+  {{item}}
+</li>
+</ul>
